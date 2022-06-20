@@ -1,0 +1,30 @@
+ALGORITHM sentense
+VAR
+    length,words,vowels: INTEGER;
+    sent : CHAR;
+BEGIN
+    length,words,vowels:= 0
+
+    REPEAT
+        write("enter a character")
+        read(sent);
+        length:= length +1
+        SWITCH (sent) DO
+            case a : vowels:=vowels + 1 BREAK ;
+            case e : vowels:=vowels + 1 BREAK ;
+            case i : vowels:=vowels + 1 BREAK ;
+            case o : vowels:=vowels + 1 BREAK ;
+            case u : vowels:=vowels + 1 BREAK ;
+            case y : vowels:=vowels + 1 BREAK ;
+            default : vowels := vowels BREAK ;
+        END_SWITCH
+
+        IF (sent = " " or sent = ".") THEN
+            words:=words + 1
+        END_IF
+
+    UNTIL (sent = ".")
+
+    write(length,words,vowels);
+
+END
