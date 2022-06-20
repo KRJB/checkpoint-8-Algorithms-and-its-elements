@@ -3,8 +3,10 @@ VAR
     length,words,vowels: INTEGER;
     sent : CHAR;
 BEGIN
-    length,words,vowels:= 0
-
+    length:= 0;
+    words:= 0;
+    vowels:= 0;
+    
     REPEAT
         write("enter a character")
         read(sent);
